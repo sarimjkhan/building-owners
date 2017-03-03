@@ -1,0 +1,19 @@
+<template name="tenantprofile">
+    Welcome, {{tenantObj.tenantFname}} {{tenantObj.tenantLname}}
+    <hr/>
+    <ul class="nav nav-tabs">
+        <li class="{{tenantProfileTabActive}}" id="tenantProfileTabBtn"><a href="#">Profile</a></li>
+        <li class="{{tenantUnitsTabActive}}" id="tenantUnitsTabBtn"><a href="#">My Units</a></li>
+        <li class="{{tenantEditProfileTabActive}}" id="editTenantProfileTabBtn"><a href="#">Edit Profile</a></li>
+    </ul>
+    <p> <a href="#" class="logout" style="position: absolute; right: 10px;top:0px;"> Logout </a></p>
+    {{#if isTenantProfileTab}}
+        {{> tenantprofiletab}}
+    {{/if}}
+    {{#if isTenantUnitsTab}}
+        {{> tenantunitstab}}
+    {{/if}}
+    {{#if isTenantEditProfileTab}}
+        {{> tenanteditprofiletab}}
+    {{/if}}
+</template>

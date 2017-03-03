@@ -1,0 +1,26 @@
+<template name="tenanteditprofiletab">
+    <div class="container">
+        <legend>Edit Tenant's Profile</legend>
+        <div class="row">
+            <form class="form-signin mg-btm">
+                <h3 class="heading-dec"> Edit Tenant </h3>
+                <div class="main">
+                    <label>Phone #:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" name="tenantPhone" value="{{tenantObj.tenantPhone}}" required/>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6">
+                            .
+                        </div>
+                        <div class="col-xs-6 col-md-6 pull-right">
+                            <input type="submit" value="Update" class="btn btn-large btn-success pull-right" name="add" id="editTenantProfileBtn" />
+                        </div>
+                    </div>
+                </div>
+                <span class="clearfix"></span>
+            </form>
+        </div>
+    </div>
+</template>

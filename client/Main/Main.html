@@ -1,0 +1,31 @@
+<head>
+	<title> Building Owners </title>
+</head>
+
+<body>
+	{{> mainContainer}}
+</body>
+
+<template name="mainContainer">
+	{{ #if currentUser }}
+		{{> profile }}
+	{{ else}}
+		{{#if registerForm}}
+			<a href="#" class="signin-owner" style="position:absolute; right:0px; top:0px;"> Login as Owner</a>
+			{{> register}}
+		{{/if}}
+		{{#if signinForm}}
+			<a href="#" class="register-owner" style="position:absolute; right:0px; top:0px;"> Register </a>
+			{{> login }}
+			<a id="tenantLoginBtn" href="#">Login as Primary Tenant</a>
+		{{/if}}
+		{{#if isTenantLogin}}
+			{{> tenantLogin}}
+			<a href="#" class="signin-owner" > Login as Owner</a>
+		{{else}}
+			{{#if tenantUser}}
+				{{> tenantprofile}}
+			{{/if}}
+		{{/if}}
+	{{/if}}
+</template>

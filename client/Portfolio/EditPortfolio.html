@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/register-login.css">
+
+</head>
+<template name="editportfolio">
+    <div class="container">
+        <div class="row">
+            <form class="form-signin mg-btm">
+                <h3 class="heading-dec"> Edit Portfolio </h3>
+                <div class="main">
+                    <label>Portfolio Name:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control" name="portfolioName" value="{{portfolioObj.name}}" required/>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6">
+                            .
+                        </div>
+                        <div class="col-xs-6 col-md-6 pull-right">
+                            <input type="submit" value="Update" class="btn btn-large btn-success pull-right" name="add" id="addportfolioBtn" required/>
+                        </div>
+                    </div>
+                </div>
+                <span class="clearfix"></span>
+            </form>
+        </div>
+    </div>
+</template>

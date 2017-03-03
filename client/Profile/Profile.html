@@ -1,0 +1,23 @@
+<template name="profile">
+		Welcome, {{username}}
+	<hr/>
+	<ul class="nav nav-tabs">
+		<li class="{{profileTabActive}}" id="profileTabBtn"><a href="#">Profile</a></li>
+		<li class="{{portfoliosTabActive}}" id="portfoliosTabBtn"><a href="#">Portfolios</a></li>
+		<li class="{{addPortfolioTabActive}}" id="addPortfolioTabBtn"><a href="#">Add Portfolio</a></li>
+		<li class="{{editProfileTabActive}}" id="editProfileTabBtn"><a href="#">Edit Profile</a></li>
+	</ul>
+	<p> <a href="#" class="logout" style="position: absolute; right: 10px;top:0px;"> Logout </a></p>
+	{{#if isProfileTab}}
+		{{> profiletab}}
+	{{/if}}
+	{{#if isPortfoliosTab}}
+		{{> portfolios}}
+	{{/if}}
+	{{#if isAddPortfolioTab}}
+		{{> addportfolio}}
+	{{/if}}
+	{{#if isEditProfileTab}}
+		{{> editprofile}}
+	{{/if}}
+</template>

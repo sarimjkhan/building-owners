@@ -1,0 +1,15 @@
+<template name="units">
+    <div class="container">
+        <div>
+            {{#each unitList}}
+                <div id="{{_id}}" class="unitItem" style="height:75px; width:200px; background-color: #7aba7b">
+                    <a id="{{_id}}" class="removeBtn" href="#" style="float: right;color:black;">Remove</a>
+                    <label>{{ area }}sq ft </label>
+                    <label>Tenant: {{ tenantFname }}</label>
+                    <label>{{noOfResidents}} residents</label>
+                </div>
+                <br/>
+            {{/each}}
+        </div>
+    </div>
+</template>

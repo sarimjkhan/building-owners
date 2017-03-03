@@ -1,0 +1,17 @@
+<template name="buildings">
+    <div class="container">
+        <div>
+            {{ #if isBuildingDetailsTab }}
+                {{> building}}
+            {{ else}}
+                {{#each buildingList}}
+                    <div id="{{_id}}" class="buildingItem itemDiv" style="">
+                        <a id="{{_id}}" class="removeBtn" href="#" style="float: right;color:black;">Remove</a>
+                        <label style="padding-top:17px; text-align: center; font-size: 25px;">{{ name }} </label>
+                    </div>
+                    <br/>
+                {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</template>

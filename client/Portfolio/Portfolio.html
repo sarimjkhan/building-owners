@@ -1,0 +1,20 @@
+<template name="portfolio">
+    <div>
+        Portfolio: {{ currentPortfolioObj.name }}
+    </div>
+    <ul class="nav nav-pills">
+        <li class="{{secondLevelBuildingsTabActive}}" id="buildingsTabBtn"><a href="#">Buildings</a></li>
+        <li class="{{secondLevelAddBuildingTabActive}}" id="addBuildingTabBtn"><a href="#">Add Building</a></li>
+        <li class="{{secondLevelEditPortfolioTabActive}}" id="editPortfolioTabBtn"><a href="#">Edit Portfolio</a></li>
+    </ul>
+    <p> <a href="#" class="logout" style="position: absolute; right: 10px;top:0px;"> Logout </a></p>
+    {{#if isSecondLevelBuildingsTab}}
+        {{> buildings}}
+    {{/if}}
+    {{#if isSecondLevelAddBuildingTab}}
+        {{> addbuilding}}
+    {{/if}}
+    {{#if isSecondLevelEditPortfolioTab}}
+        {{> editportfolio}}
+    {{/if}}
+</template>

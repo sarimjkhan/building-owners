@@ -1,0 +1,18 @@
+<template name="portfolios">
+    <div class="container">
+        <legend>Portfolios</legend>
+        <div>
+            {{ #if isPortfolioDetailsTab }}
+                {{> portfolio}}
+            {{ else}}
+                {{#each portfolioList}}
+                    <div id="{{_id}}" class="portfolioItem itemDiv" style="">
+                        <a id="{{_id}}" class="removeBtn" href="#" style="float: right;color:black;">Remove</a>
+                        <label style="padding-top:17px; text-align: center; font-size: 25px;">{{ name }} </label>
+                    </div>
+                    <br/>
+                {{/each}}
+            {{/if}}
+        </div>
+    </div>
+</template>
