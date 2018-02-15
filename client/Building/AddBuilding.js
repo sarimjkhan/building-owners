@@ -1,5 +1,5 @@
 /**
- * Created by sarimj on 12/24/2015.
+ * Created by behroz baig on 12/24/2015.
  */
 buildings = new Mongo.Collection('buildings')
 Template.addbuilding.events({
