@@ -1,6 +1,7 @@
 /**
  * Created by sarimj on 12/25/2015.
- */
+ * This code is added to the admin dashboard branch and I need you to merge it in the master branch. Thanks! 
+*/
 
 //Main.js
 Session.setDefault('registerForm',false);
